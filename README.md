@@ -8,7 +8,7 @@ Grab the latest build from **[Releases](../../releases)**:
 
 | Platform | File | Notes |
 |---|---|---|
-| Windows | `DeepHistory-*-win-x64.exe` (portable) or the `Setup` installer | Unsigned: on the SmartScreen warning, click *More info → Run anyway* |
+| Windows | `DeepHistory-*-win-x64-portable.exe` (no install) or `DeepHistory-Setup-*.exe` (installer) | Unsigned: on the SmartScreen warning, click *More info → Run anyway* |
 | macOS | `DeepHistory-*-mac-*.dmg` | Unsigned: right-click the app → *Open* the first time |
 | Linux | `DeepHistory-*-linux-x86_64.AppImage` | `chmod +x` it, then run |
 | Any browser | `DeepHistory.html` | Single offline file; just double-click it |

@@ -21,11 +21,39 @@
   "build": {
     "appId": "com.djeyprott.deephistory",
     "productName": "Deep History",
-    "files": ["app/**", "dist/index.html", "package.json"],
-    "directories": { "output": "release" },
-    "win": { "target": ["portable", "nsis"] },
-    "mac": { "target": ["dmg", "zip"], "category": "public.app-category.simulation-games" },
-    "linux": { "target": ["AppImage"], "category": "Game" },
-    "artifactName": "DeepHistory-${version}-${os}-${arch}.${ext}"
+    "files": [
+      "app/**",
+      "dist/index.html",
+      "package.json"
+    ],
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "portable",
+        "nsis"
+      ]
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "category": "public.app-category.simulation-games"
+    },
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "category": "Game"
+    },
+    "artifactName": "DeepHistory-${version}-${os}-${arch}.${ext}",
+    "nsis": {
+      "artifactName": "DeepHistory-Setup-${version}.exe"
+    },
+    "portable": {
+      "artifactName": "DeepHistory-${version}-win-x64-portable.exe"
+    }
   }
 }
