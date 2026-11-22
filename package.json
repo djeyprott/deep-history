@@ -1,0 +1,31 @@
+{
+  "name": "deep-history",
+  "productName": "Deep History",
+  "version": "0.1.0",
+  "description": "A human history simulator: emergent climate, peoples, languages, religions, technology, states and historical figures from 15,000 BCE.",
+  "type": "module",
+  "main": "app/main.cjs",
+  "license": "MIT",
+  "author": "djeyprott",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "start": "npm run build && electron .",
+    "headless": "node test/run.mjs",
+    "dist": "npm run build && electron-builder --publish never"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8",
+    "esbuild": "^0.24.0"
+  },
+  "build": {
+    "appId": "com.djeyprott.deephistory",
+    "productName": "Deep History",
+    "files": ["app/**", "dist/index.html", "package.json"],
+    "directories": { "output": "release" },
+    "win": { "target": ["portable", "nsis"] },
+    "mac": { "target": ["dmg", "zip"], "category": "public.app-category.simulation-games" },
+    "linux": { "target": ["AppImage"], "category": "Game" },
+    "artifactName": "DeepHistory-${version}-${os}-${arch}.${ext}"
+  }
+}
